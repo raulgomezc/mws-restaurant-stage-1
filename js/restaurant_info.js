@@ -55,6 +55,40 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
+  const imageSizes = [
+    {
+      size: 875,
+      screen: 1080
+    },
+    {
+      size: 575,
+      screen: 1326
+    },
+    {
+      size: 400,
+      screen: 975
+    },
+    {
+      size: 875,
+      screen: 800
+    },
+    {
+      size: 575,
+      screen: 670
+    },
+    {
+      size: 400,
+      screen: 495
+    }
+  ]
+  const picture = document.getElementById('restaurant-picture');
+  imageSizes.map((imageSize) => {
+    let source = document.createElement('source');
+    source.srcset = DBHelper.imageUrlForRestaurantSource(restaurant, imageSize.size);
+    source.media = `(max-width: ${imageSize.screen}px)`;
+    source.type = "image/jpg";
+    picture.insertAdjacentHTML('afterbegin', source.outerHTML);
+  });
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
