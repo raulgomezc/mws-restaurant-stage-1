@@ -48,6 +48,18 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #BF1722;
+  color: white;
+  padding: 8px;
+  z-index: 3;
+}
+.skip-link:focus {
+  top: 0;
+}
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -186,7 +198,7 @@ nav h1 a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 2;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
