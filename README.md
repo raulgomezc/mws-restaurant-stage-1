@@ -19,10 +19,10 @@ This is a project for the Front End Web Developer Udacity NanoDegree. It's an we
 ## Set up the project
 
 * Clone the repo or download it in a zip
-* Run `nom install`
+* Run `npm install`
 * Run `grunt responsive_images`
 
-## How to run the game
+## How to the app
 
 * Go to the project folder in your terminal
 * Run an HTTP server for example:
