@@ -50,7 +50,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -300px;
   left: 0;
   background: #BF1722;
   color: white;
