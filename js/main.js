@@ -1,3 +1,21 @@
+/**
+ * Register the service worker
+ */
+registerServiceWorker = () => {
+  if (!navigator.serviceWorker) return;
+
+  navigator.serviceWorker.register('/service_worker.js', {scope: '/'});
+
+  let refreshing;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (refreshing) return;
+    window.location.reload();
+    refreshing = true;
+  });
+};
+
+registerServiceWorker();
+
 let restaurants,
   neighborhoods,
   cuisines
